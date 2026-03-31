@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%post
+    conda init
+    # Create envs and install packages
+    conda create --name mytorch python=3.11 matplotlib numpy 
+    
+    . /opt/conda/etc/profile.d/conda.sh
+    conda activate mytorch 
+    conda install pip
+    pip install torch torchvision tensorboard 
+    
+    # some special environment things for singularity
+    echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT
+    echo "conda activate mytorch" >> $SINGULARITY_ENVIRONMENT
