@@ -2,3 +2,4 @@ data/
 models/
 runs/
 env/pytorch.sif
+.ipynb_checkpoints
