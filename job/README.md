@@ -20,7 +20,7 @@ apptainer pull oras://ghcr.io/matrics-bootcamp/pytorch:latest
 
 If this takes too long, you can copy from scratch:
 ```bash
-cp /scratch/groups/jfreshwa/containers/pytorch_latest.sif ./env/
+cp /oak/stanford/schools/ees/containers/pytorch_latest.sif ./env/
 ```
 
 ## Step 4: Submit the Job
